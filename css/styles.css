@@ -11,6 +11,10 @@
     --green: #31D0AA;
     --navyblue-modal: rgba(46, 47, 66, 0.40);
     --dairy: #FCFCFC;
+    /* Break point */
+    --mob: 428px;
+    --tab: 768px;
+    --desktop: 1158px;
 }
 
 body {
@@ -54,11 +58,34 @@ body {
     text-decoration: none;
 }
 
+
+/* Base styles for mobile devices */
 .container {
-    min-width: 428px;
-    max-width: 1158px;
+    min-width: 320px;
+    max-width: 396px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 1158px;
     padding: 0 15px;
-    margin: 0 auto;
+    margin: 0 auto; */
+    outline: 2px solid red;
+    outline-offset: -2px;
+}
+
+/* Tablet styles */
+@media only screen and (min-width: var(--tab)) {
+    .container {
+        min-width: 768px;
+    }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: var(--desktop)) {
+    .container {
+        min-width: 1158px;
+    }
 }
 
 h1,
@@ -96,8 +123,7 @@ img {
 }
 
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
 }
 
 /* Header section*/
@@ -227,6 +253,7 @@ img {
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
+    min-width: 428px;
 }
 
 .contact:hover,
@@ -234,12 +261,12 @@ img {
     color: var(--ocean);
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
     .page-nav-list,
     .link-contact {
         display: none;
     }
-}
+} */
 
 /* STUDIO */
 /* Hero section (1) */
@@ -256,17 +283,18 @@ img {
     max-width: 1440px;
 }
 
-.hero .container {
+.hero-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 48px;
+    min-width: 320px;
 }
 
 .h-hero {
     color: var(--white);
     text-align: center;
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
@@ -296,11 +324,11 @@ img {
     background-color: var(--ocean);
 }
 
-@media screen and (max-width: 428px) {
+/* @media screen and (max-width: 428px) {
     .hero-container {
         padding: 112px 54px;
     }
-}
+} */
 
 /* Modal window */
 
@@ -561,7 +589,7 @@ input[type="checkbox"]:focus-visible + .check-agree > .modal-check {
     margin-bottom: 8px;
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
     .futures-list {
         display: inline-flex;
         flex-direction: column;
@@ -579,7 +607,7 @@ input[type="checkbox"]:focus-visible + .check-agree > .modal-check {
         align-items: flex-start;
         gap: 8px;
     }
-}
+} */
 
 
 /* Doing section (3)*/
