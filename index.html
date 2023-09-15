@@ -26,7 +26,12 @@
           <a href="./index.html" class="link-logo link">
             Web<span class="logo-web">Studio</span>
           </a>
-          <button class="header-btn">
+          <button
+            class="header-btn js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Menu open button"
+          >
             <svg class="header-btn-icon" width="32" height="22">
               <use href="./images/icons.svg#icon-menu"></use>
             </svg>
@@ -61,16 +66,16 @@
     </header>
     <main>
       <!--Hero-->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="hero-container container">
           <h1 class="h-hero">Effective Solutions for Your Business</h1>
           <button class="button-hero" type="button" data-modal-open>
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
       <!--Section 1-->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="futures-list list">
@@ -124,9 +129,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Section 2-->
-      <!-- <section class="section doing-section">
+      <section class="section doing-section">
         <div class="doing container">
           <h2 class="heading-doing heading-tw">What are we doing</h2>
           <ul class="doing-list list">
@@ -159,7 +164,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Section 3-->
       <!-- <section class="team section">
         <div class="container">
@@ -329,7 +334,7 @@
         </div>
       </section> -->
       <!-- Section Customers -->
-      <!-- <section class="customers-section section">
+      <section class="customers-section section">
         <div class="container">
           <h2 class="heading-tw">Customers</h2>
           <ul class="customer-list list">
@@ -377,7 +382,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!-- Footer -->
@@ -539,9 +544,12 @@
       </div>
     </div>
     <!-- Mobile menu -->
-    <div class="mobile-backdrop">
+    <div class="mobile-backdrop js-menu-container" id="mobile-menu">
       <div class="mobile-container">
-        <button class="mobile-menu-btn">
+        <button
+          class="mobile-menu-btn js-close-menu"
+          aria-label="Close menu button"
+        >
           <svg class="mobile-menu-close" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
@@ -557,14 +565,14 @@
             <a href="" class="mobile-menu-link link">Contacts</a>
           </li>
         </ul>
-        <ul class="mob-link-contact list">
-          <li>
-            <a class="mob-contact link" href="tel:+110001111111">
+        <ul class="mob-contact-list list">
+          <li class="mob-contact">
+            <a class="mob-link-phone link" href="tel:+110001111111">
               +11 (000) 111-11-11
             </a>
           </li>
-          <li>
-            <a class="mob-contact link" href="mailto:info@devstudio.com">
+          <li class="mob-contact">
+            <a class="mob-link-contact link" href="mailto:info@devstudio.com">
               info@devstudio.com
             </a>
           </li>
@@ -602,5 +610,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
