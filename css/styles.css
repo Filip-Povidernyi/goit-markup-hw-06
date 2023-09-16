@@ -61,9 +61,6 @@ body {
     max-width: 428px;
     padding: 0 16px;
     margin: 0 auto;
-
-    outline: 2px solid red;
-    outline-offset: -2px;
 }
 
 /* Tablet styles */
@@ -335,6 +332,13 @@ img {
     padding: 188px 0;
     margin: 0 auto;
     max-width: 1440px;
+}
+
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(var(--grey), var(--grey)),
+                          url('../images/people-office@2x.jpg');
+    }
 }
 
 .hero-container {
@@ -972,6 +976,7 @@ input[type="checkbox"]:focus-visible + .check-agree > .modal-check {
     max-width: 428px;
     gap: 16px 24px;
     flex-wrap: wrap;
+    padding-bottom: 48px;
 }
 
 /* Portfolio section Cards */
@@ -981,7 +986,6 @@ input[type="checkbox"]:focus-visible + .check-agree > .modal-check {
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
-    padding-bottom: 48px;
 }
 
 .cards-heading {
