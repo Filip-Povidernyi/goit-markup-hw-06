@@ -325,11 +325,11 @@ img {
 .hero {
     background-color: var(--navyblue);
     background-image: linear-gradient(var(--grey), var(--grey)), 
-        url('../images/people_office.jpg');
+        url('../images/mob_people_off.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 188px 0;
+    padding: 112px 0;
     margin: 0 auto;
     max-width: 1440px;
 }
@@ -337,7 +337,7 @@ img {
 @media (min-resolution: 192dpi) {
     .hero {
         background-image: linear-gradient(var(--grey), var(--grey)),
-                          url('../images/people-office@2x.jpg');
+                          url('../images/mob_people_off@2x.jpg');
     }
 }
 
@@ -356,13 +356,39 @@ img {
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    max-width: 496px
+    max-width: 320px
 }
 
 @media only screen and (min-width: 768px) {
     .h-hero {
-    font-size: 56px;
-  }
+        font-size: 56px;
+        max-width: 496px;
+    }
+    .hero {
+        background-image: linear-gradient(var(--grey), var(--grey)),
+            url('../images/Dark-bg.jpg');
+    }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(var(--grey), var(--grey)),
+                url('../images/Dark-bg@2x.jpg');
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero {
+        background-image: linear-gradient(var(--grey), var(--grey)),
+                url('../images/people_office.jpg');
+    }
+}
+
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(var(--grey), var(--grey)),
+            url('../images/people-office@2x.jpg');
+    }
 }
 
 .button-hero {
@@ -728,6 +754,7 @@ input[type="checkbox"]:focus-visible + .check-agree > .modal-check {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        font-weight: 400;
     }
 }
 
